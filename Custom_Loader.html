@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anu Gupta's Page</title>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+<h2 id="title">Custom Loader - dcode</h2>
+<img src="loading.gif" alt="Loading..." />
+<img src="https://media.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif"
+     height="180px" width="180px" frameBorder="0" class="giphy-embed"/>
+
+<img src="image1.jpg" class="thumb" />
+<img src="image2.jpg" class="thumb" />
+<img src="image3.jpg" class="thumb" />
+</body>
+<script>
+    window.addEventListener("load", function () {
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden"; // class "loader hidden"
+    });
+</script>
+</html>

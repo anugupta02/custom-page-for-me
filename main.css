@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #585858;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 80px;
+    width: 80px;
+    background: #fff;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: lightblue;
+    cursor: pointer;
+}
+
+/* now let's animate the white circle or the box */
+.box:hover{
+    animation: btnAnime .6s ease forwards;
+
+}
+@keyframes btnAnime{
+    5%{
+        transform: scale(0.8);
+    }
+    25%{
+        background: none;
+    }
+    50%{
+        transform: scale(1.5);
+        border: 1px solid #555;
+    }
+    100%{
+        transform: scale(1);
+        background: rgba(255,255,255,0.1);
+        border: 1px solid #555;
+    }
+}
+
+/* now let's animate the bird */
+.box:hover i{
+    animation: fly .6s ease forwards;
+}
+@keyframes fly{
+    16.6%{transform: translate(50px, -60px) rotate(-60deg);}
+    33.33%{transform: translate(50px, -100px) rotate(-120deg);}
+    49.8%{transform: translate(0, -120px) rotate(-180deg);}
+    66.4%{transform: translate(-50px, -100px) rotate(-240deg);}
+    83%{transform: translate(-50px, -50px) rotate(-300deg);}
+    100%{transform: translate(0, 0) rotate(-360deg);}
+}

@@ -1,0 +1,45 @@
+/* now let's animate the Pre-Loader Cubes */
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: monospace;
+}
+h3{
+    margin-bottom: 190px;
+}
+.preload{
+width: 100%;
+height: 100%;
+background: #333;
+position: fixed;
+top:0;
+left:0;
+z-index:1;
+}
+
+.logo{
+width: 300px;
+height: 70px;
+margin: 150px auto 50px auto;
+font-size: 50px;
+    text-shadow: -1px 2px 2px #000;
+    text-align: center;
+    color: azure;
+}
+
+.loader1, .loader{
+    position: absolute;
+    border: 5px solid transparent;
+    border-radius: 50%;
+}
+
+.loader1{
+    width: 70px;
+    height: 70px;
+    border-top: 5px solid azure;
+}
