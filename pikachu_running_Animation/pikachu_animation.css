@@ -1,0 +1,65 @@
+
+*{
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    background-image: url('http://www.hdfondos.eu/pictures/2012/0221/1/orig_507673.jpg');
+    background-position: bottom;
+
+}
+
+
+.pikachu{
+    width: 400px;
+    height: 400px;
+    background-image: url('https://kcimgdshaunjandrews.files.wordpress.com/2016/06/pikachu-left.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pikachu.uno{
+
+    transform: scaleX(-1);
+    position: absolute;
+    animation-name: pikachuRun;
+    left: -300px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+
+.pikachu.dos{
+    transform: scaleX(1);
+    position: absolute;
+    animation-name: pikachuRunDos;
+    right: -300px;
+    animation-delay: 5s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes pikachuRun {
+    /*del 50% del tiempo hasta el final se mantiene en esa posicion, los primeros 50% el item corre.*/
+    50%,100%{
+        left: 100%;
+    }
+
+}
+
+@keyframes pikachuRunDos{
+
+    50%,100%{
+        right: 100%;
+    }
+
+}
