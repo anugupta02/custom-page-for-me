@@ -1,0 +1,273 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+:root {
+  --frame: #8e8081;
+  --window: #e6fdfe;
+  --building: #8a8f8f;
+  --door: #3a4245;
+  --cable: #000;
+  --walkway: #bfbfbf;
+  --stroke: #1a1a1a;
+  --pupil: #fff;
+  --tongue: #f00;
+  --aux: #d03e4a;
+  --rocket-shine: rgba(255,255,255,0.85);
+  --rocket-base: #262626;
+  --rocket-wing: #595959;
+  --rocket-body: #ccc;
+  --hatch: #333;
+}
+body {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background: #f2d6f5;
+}
+.char {
+  display: inline-block;
+}
+.rocket__stroke {
+  fill: var(--stroke);
+  stroke: var(--stroke);
+}
+.rocket__face-takeoff path {
+  fill: none;
+}
+.rocket__base-shine {
+  fill: var(--rocket-shine);
+}
+.rocket__base {
+  fill: var(--rocket-base);
+}
+.rocket__windscreen {
+  stroke: var(--rocket-base);
+}
+.rocket__wing {
+  fill: var(--rocket-wing);
+}
+.rocket__ship-tip {
+  fill: var(--rocket-base);
+}
+.rocket__ship-body {
+  fill: var(--rocket-body);
+}
+.rocket__ship-shine {
+  fill: var(--rocket-shine);
+}
+.rocket__aux {
+  fill: var(--aux);
+}
+.rocket__aux-shine {
+  fill: var(--rocket-shine);
+}
+.rocket__aux-base {
+  fill: var(--rocket-base);
+}
+.rocket__pupil {
+  fill: var(--pupil);
+}
+.rocket__tongue {
+  fill: var(--tongue);
+}
+.launch-control {
+  width: 240px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
+}
+.launch-control__window {
+  fill: var(--window);
+}
+.launch-control__door {
+  fill: var(--door);
+}
+.launch-control__walkway {
+  stroke: var(--walkway);
+}
+.launch-control__cable {
+  stroke: var(--cable);
+}
+.launch-control__hatch {
+  stroke: var(--hatch);
+}
+.launch-control__frame,
+.launch-control__tower {
+  stroke: var(--frame);
+}
+.launch-control__tower {
+  fill: var(--building);
+}
+.launch-control__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: hsl(var(--h, 115), 65%, calc(var(--l, 50) * 1%));
+  color: #fff;
+  font-weight: bold;
+  outline: transparent;
+  font-size: 2rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-shadow: 1px 4px 10px 0 hsla(var(--h, 116), 53%, 6%, 0.5);
+}
+.launch-control__button:hover {
+  --l: 60;
+}
+.launch-control__button:active {
+  --l: 40;
+}
+.rocket,
+.control-tower {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+.launch-control__jets,
+.launch-control__bubbles {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.jet {
+  background: rgba(248,112,27,0.75);
+  position: absolute;
+  bottom: 24%;
+}
+.jet--one,
+.jet--three {
+  width: 8%;
+  height: 38%;
+}
+.jet--one {
+  left: 27%;
+}
+.jet--three {
+  right: 27%;
+}
+.jet--two {
+  left: 50%;
+  width: 20%;
+  height: 38%;
+}
+.launch-control__bubbles--two {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.bubble {
+  position: absolute;
+  left: calc(var(--x, 50) * 1%);
+  bottom: 24%;
+  border-radius: 50%;
+  background: hsl(0, 0%, calc(var(--l, 80) * 1%));
+  height: calc(var(--s, 10) * 1px);
+  width: calc(var(--s, 10) * 1px);
+}
+.bubble--0,
+.bubble--10 {
+  --s: 60;
+  --l: 94;
+  --x: 0;
+}
+.bubble--1,
+.bubble--11 {
+  --s: 40;
+  --l: 85;
+  --x: 15;
+}
+.bubble--2,
+.bubble--12 {
+  --s: 38;
+  --l: 98;
+  --x: 24;
+}
+.bubble--3,
+.bubble--13 {
+  --s: 28;
+  --l: 80;
+  --x: 32;
+}
+.bubble--4,
+.bubble--14 {
+  --s: 32;
+  --l: 98;
+  --x: 36;
+}
+.bubble--5,
+.bubble--15 {
+  --s: 40;
+  --l: 86;
+  --x: 42;
+}
+.bubble--6,
+.bubble--16 {
+  --s: 29;
+  --l: 93;
+  --x: 50;
+}
+.bubble--7,
+.bubble--17 {
+  --s: 35;
+  --l: 87;
+  --x: 56;
+}
+.bubble--8,
+.bubble--18 {
+  --s: 40;
+  --l: 98;
+  --x: 65;
+}
+.bubble--9,
+.bubble--19 {
+  --s: 60;
+  --l: 89;
+  --x: 72;
+}
+label {
+  height: 44px;
+  width: 44px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+label > svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+label path {
+  fill: #db76e0;
+}
+label svg:nth-of-type(1) {
+  display: none;
+}
+[type='checkbox'] {
+  height: 0;
+  width: 0;
+}
+:checked ~ label svg:nth-of-type(1) {
+  display: block;
+}
+:checked ~ label svg:nth-of-type(2) {
+  display: none;
+}
